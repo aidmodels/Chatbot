@@ -1,0 +1,6 @@
+[package]
+name="Chatbot"
+
+[[solvers]] 
+name="chatbotSolver"
+class="chatter/solver/ChatbotSolver"

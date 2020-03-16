@@ -1,0 +1,5 @@
+*.pyc
+.env
+db.sqlite3
+docker_chatbotSolver
+runner_chatbotSolver.py
