@@ -1,5 +1,6 @@
 [package]
 name="Chatbot"
+vendor="aicamp"
 
 [[solvers]] 
 name="chatbotSolver"
