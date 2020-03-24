@@ -9,12 +9,16 @@ class ChatbotSolver(Solver):
         # Do you Init Work here
         self.chatbot = ChatBot('AID_CHATBOT',
             logic_adapters=[
+                'chatterbot.logic.BestMatch',
+                'chatterbot.logic.SpecificResponseAdapter',
                 'chatterbot.logic.MathematicalEvaluation',
-                'chatterbot.logic.TimeLogicAdapter'
         ])
         trainer = ChatterBotCorpusTrainer(self.chatbot)
         # Train the chatbot based on the english corpus
-        trainer.train("chatterbot.corpus.english")
+        trainer.train(
+           "chatterbot.corpus.english",
+           "chatterbot.corpus.english.greetings",
+           "chatterbot.corpus.english.conversations")
         self.ready()
 
     def infer(self, data):
